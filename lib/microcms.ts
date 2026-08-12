@@ -28,7 +28,7 @@ export async function fetchPokemonListWithMeta(): Promise<PokemonListMeta> {
 
   const response = await fetch(url, {
     headers: { "X-MICROCMS-API-KEY": apiKey },
-    next: { revalidate: 3600 },
+    next: { revalidate: 120 },
   });
 
   if (!response.ok) {
